@@ -1,0 +1,301 @@
+{
+  "chosen_C": 10,
+  "test_size": {
+    "legit": 709,
+    "scam": 80,
+    "spam": 62
+  },
+  "model": {
+    "macro_f1": 0.882,
+    "scam_recall": 0.9,
+    "legit_flagged_as_scam": 0.003
+  },
+  "baselines": {
+    "naive_bayes_words_only": {
+      "macro_f1": 0.765,
+      "scam_recall": 0.75,
+      "legit_flagged_as_scam": 0.0
+    },
+    "logistic_words_only": {
+      "macro_f1": 0.892,
+      "scam_recall": 0.912,
+      "legit_flagged_as_scam": 0.001
+    },
+    "red_flags_only": {
+      "macro_f1": 0.715,
+      "scam_recall": 0.863,
+      "legit_flagged_as_scam": 0.011
+    }
+  },
+  "website_verdicts": {
+    "scams_warned_about": 0.912,
+    "legit_texts_wrongly_warned": 0.006,
+    "spam_warned_about": 0.355
+  },
+  "old_uci_spam_not_marked_okay": 0.98,
+  "confusion_matrix": {
+    "rows_true_cols_pred": [
+      "legit",
+      "spam",
+      "scam"
+    ],
+    "values": [
+      [
+        705,
+        2,
+        2
+      ],
+      [
+        4,
+        46,
+        12
+      ],
+      [
+        1,
+        7,
+        72
+      ]
+    ]
+  },
+  "report": {
+    "legit": {
+      "precision": 0.9929577464788732,
+      "recall": 0.9943582510578279,
+      "f1-score": 0.9936575052854123,
+      "support": 709.0
+    },
+    "spam": {
+      "precision": 0.8363636363636363,
+      "recall": 0.7419354838709677,
+      "f1-score": 0.7863247863247863,
+      "support": 62.0
+    },
+    "scam": {
+      "precision": 0.8372093023255814,
+      "recall": 0.9,
+      "f1-score": 0.8674698795180723,
+      "support": 80.0
+    },
+    "accuracy": 0.9670975323149236,
+    "macro avg": {
+      "precision": 0.888843561722697,
+      "recall": 0.8787645783095986,
+      "f1-score": 0.882484057042757,
+      "support": 851.0
+    },
+    "weighted avg": {
+      "precision": 0.9669075580424361,
+      "recall": 0.9670975323149236,
+      "f1-score": 0.9666896572984016,
+      "support": 851.0
+    }
+  },
+  "modern_examples_model_alone": {
+    "words_only": {
+      "scams_called_scam": "11 of 16",
+      "legit_called_scam": "1 of 16"
+    },
+    "words_plus_red_flags": {
+      "scams_called_scam": "13 of 16",
+      "legit_called_scam": "0 of 16"
+    }
+  },
+  "modern_examples": {
+    "scams_warned_about": "14 of 16",
+    "legit_wrongly_warned": "0 of 16",
+    "results": [
+      {
+        "text": "USPS: Your package is on hold due to an incomplete address. Please update your details within 24 hours: https://usps-redelivery.top/track",
+        "expected": "scam",
+        "verdict": "scam",
+        "scam_probability": 0.999
+      },
+      {
+        "text": "E-ZPass: You have an unpaid toll balance of $6.99. To avoid a late fee of $50, pay now at ezpass-tolls.com",
+        "expected": "scam",
+        "verdict": "scam",
+        "scam_probability": 0.808
+      },
+      {
+        "text": "Chase Alert: Your card has been locked due to unusual activity. Verify your identity at bit.ly/3kXqR2 to restore access.",
+        "expected": "scam",
+        "verdict": "scam",
+        "scam_probability": 1.0
+      },
+      {
+        "text": "Amazon: A charge of $849.99 for an iPhone 15 Pro was placed on your account. If this wasn't you call 1-888-412-9081 immediately.",
+        "expected": "scam",
+        "verdict": "scam",
+        "scam_probability": 0.988
+      },
+      {
+        "text": "IRS NOTICE: You have an outstanding tax balance. Failure to pay today will result in legal action. Pay with Google Play gift cards, call 202-555-0148.",
+        "expected": "scam",
+        "verdict": "scam",
+        "scam_probability": 0.995
+      },
+      {
+        "text": "Hi Mom, I dropped my phone in the toilet, this is my new number. Can you send me $400 for rent, I'll pay you back tomorrow",
+        "expected": "scam",
+        "verdict": "okay",
+        "scam_probability": 0.014
+      },
+      {
+        "text": "Hello, I'm a recruiter at a staffing agency. We have a remote job paying $300-$500 per day, only 1 hour daily. Reply YES to learn more",
+        "expected": "scam",
+        "verdict": "spam",
+        "scam_probability": 0.045
+      },
+      {
+        "text": "Your Apple ID has been suspended. Sign in at apple-id-support.com to confirm your account information.",
+        "expected": "scam",
+        "verdict": "scam",
+        "scam_probability": 0.988
+      },
+      {
+        "text": "Netflix: Your payment was declined and your membership will be cancelled. Update your billing at netflix-billing-update.com",
+        "expected": "scam",
+        "verdict": "scam",
+        "scam_probability": 0.916
+      },
+      {
+        "text": "Congratulations! You've been selected to receive a $1000 Walmart gift card. Claim your reward here: walmart-rewards.click",
+        "expected": "scam",
+        "verdict": "scam",
+        "scam_probability": 1.0
+      },
+      {
+        "text": "FedEx: We were unable to deliver your parcel. Reschedule delivery and pay the $1.99 fee at fedex-parcel.xyz",
+        "expected": "scam",
+        "verdict": "scam",
+        "scam_probability": 0.825
+      },
+      {
+        "text": "Wells Fargo: Did you attempt a Zelle payment of $1,200? Reply YES or NO. If NO, call our fraud department at 877-300-4421",
+        "expected": "scam",
+        "verdict": "scam",
+        "scam_probability": 0.637
+      },
+      {
+        "text": "Coinbase: Unauthorized login detected from Russia. Secure your account now: http://185.62.48.11/coinbase",
+        "expected": "scam",
+        "verdict": "scam",
+        "scam_probability": 0.98
+      },
+      {
+        "text": "Hey is this Jessica? We met at the wine tasting last week. I've been doing really well investing in crypto lately",
+        "expected": "scam",
+        "verdict": "careful",
+        "scam_probability": 0.002
+      },
+      {
+        "text": "Michigan DMV: Final notice. You have an unpaid traffic ticket. Pay within 48 hours to avoid license suspension: mi-dmv-pay.info",
+        "expected": "scam",
+        "verdict": "scam",
+        "scam_probability": 0.991
+      },
+      {
+        "text": "PayPal: You've received a refund of $299.00. To accept, verify your bank details at paypal-refunds.online",
+        "expected": "scam",
+        "verdict": "scam",
+        "scam_probability": 0.976
+      },
+      {
+        "text": "Your Chase verification code is 482913. Don't share this code with anyone. We'll never call you to ask for it.",
+        "expected": "legit",
+        "verdict": "okay",
+        "scam_probability": 0.085
+      },
+      {
+        "text": "Reminder: you have a dentist appointment tomorrow at 10:30am with Dr. Patel. Reply C to confirm or R to reschedule.",
+        "expected": "legit",
+        "verdict": "okay",
+        "scam_probability": 0.03
+      },
+      {
+        "text": "hey are we still getting food after practice? im starving",
+        "expected": "legit",
+        "verdict": "okay",
+        "scam_probability": 0.001
+      },
+      {
+        "text": "Your DoorDash order from Chipotle is on its way! Your Dasher Marcus will arrive in about 12 minutes.",
+        "expected": "legit",
+        "verdict": "okay",
+        "scam_probability": 0.046
+      },
+      {
+        "text": "Can you venmo me $15 for the uber last night",
+        "expected": "legit",
+        "verdict": "okay",
+        "scam_probability": 0.015
+      },
+      {
+        "text": "USPS: Your package was delivered to your front door at 2:14pm. Track at https://tools.usps.com/go/TrackConfirmAction",
+        "expected": "legit",
+        "verdict": "spam",
+        "scam_probability": 0.166
+      },
+      {
+        "text": "Mom said dinner is at 7 on sunday, bring the charger you borrowed lol",
+        "expected": "legit",
+        "verdict": "okay",
+        "scam_probability": 0.001
+      },
+      {
+        "text": "Your Amazon order of AirPods Pro has shipped and will arrive Thursday. Track it in the Amazon app.",
+        "expected": "legit",
+        "verdict": "okay",
+        "scam_probability": 0.009
+      },
+      {
+        "text": "yo did you finish the stats homework? question 4 is confusing me",
+        "expected": "legit",
+        "verdict": "okay",
+        "scam_probability": 0.002
+      },
+      {
+        "text": "Your Uber is arriving now. Look for a silver Toyota Camry, plate 8KJT221.",
+        "expected": "legit",
+        "verdict": "spam",
+        "scam_probability": 0.024
+      },
+      {
+        "text": "Hi Neeraj, this is Coach Lee. Practice moved to 6pm in the CCRB tonight because of the game.",
+        "expected": "legit",
+        "verdict": "okay",
+        "scam_probability": 0.001
+      },
+      {
+        "text": "Your Google verification code is 771204",
+        "expected": "legit",
+        "verdict": "okay",
+        "scam_probability": 0.071
+      },
+      {
+        "text": "lmk when you get home safe",
+        "expected": "legit",
+        "verdict": "okay",
+        "scam_probability": 0.001
+      },
+      {
+        "text": "Spotify: Your Premium Student plan renews on Nov 3 for $5.99. Manage your plan in the app.",
+        "expected": "legit",
+        "verdict": "spam",
+        "scam_probability": 0.033
+      },
+      {
+        "text": "can you pick up milk and eggs on the way back? thanks",
+        "expected": "legit",
+        "verdict": "okay",
+        "scam_probability": 0.001
+      },
+      {
+        "text": "Delta: Your flight DL 2278 to ATL is on time. Boarding begins at 4:05pm at gate A42.",
+        "expected": "legit",
+        "verdict": "spam",
+        "scam_probability": 0.024
+      }
+    ]
+  }
+}

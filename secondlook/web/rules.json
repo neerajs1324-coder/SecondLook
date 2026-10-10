@@ -1,0 +1,250 @@
+{
+  "_note": "Shared by the Python trainer and the browser so both read messages the exact same way.",
+  "tlds": [
+    "com",
+    "net",
+    "org",
+    "info",
+    "biz",
+    "us",
+    "uk",
+    "co",
+    "io",
+    "me",
+    "ly",
+    "gl",
+    "at",
+    "cc",
+    "gd",
+    "be",
+    "in",
+    "ca",
+    "au",
+    "de",
+    "fr",
+    "eu",
+    "top",
+    "xyz",
+    "click",
+    "icu",
+    "buzz",
+    "live",
+    "shop",
+    "online",
+    "site",
+    "cyou",
+    "vip",
+    "life",
+    "work",
+    "rest",
+    "cfd",
+    "sbs",
+    "win",
+    "loan",
+    "gq",
+    "tk",
+    "ml",
+    "cf",
+    "ga",
+    "app",
+    "link",
+    "tv",
+    "mobi",
+    "club",
+    "gov",
+    "edu"
+  ],
+  "shorteners": [
+    "bit.ly",
+    "tinyurl.com",
+    "t.co",
+    "goo.gl",
+    "ow.ly",
+    "is.gd",
+    "cutt.ly",
+    "rb.gy",
+    "shorturl.at",
+    "tiny.cc",
+    "rebrand.ly",
+    "t.ly",
+    "s.id"
+  ],
+  "suspiciousTlds": [
+    "top",
+    "xyz",
+    "click",
+    "icu",
+    "buzz",
+    "live",
+    "shop",
+    "online",
+    "site",
+    "cyou",
+    "vip",
+    "life",
+    "work",
+    "rest",
+    "cfd",
+    "sbs",
+    "win",
+    "loan",
+    "gq",
+    "tk",
+    "ml",
+    "cf",
+    "ga",
+    "link"
+  ],
+  "brands": {
+    "usps": [
+      "usps.com"
+    ],
+    "ups": [
+      "ups.com"
+    ],
+    "fedex": [
+      "fedex.com"
+    ],
+    "dhl": [
+      "dhl.com"
+    ],
+    "amazon": [
+      "amazon.com",
+      "amazon.co.uk",
+      "amzn.to"
+    ],
+    "paypal": [
+      "paypal.com"
+    ],
+    "apple": [
+      "apple.com"
+    ],
+    "icloud": [
+      "icloud.com"
+    ],
+    "netflix": [
+      "netflix.com"
+    ],
+    "chase": [
+      "chase.com"
+    ],
+    "wellsfargo": [
+      "wellsfargo.com"
+    ],
+    "bankofamerica": [
+      "bankofamerica.com"
+    ],
+    "citi": [
+      "citi.com",
+      "citibank.com"
+    ],
+    "irs": [
+      "irs.gov"
+    ],
+    "ezpass": [
+      "e-zpassny.com",
+      "ezpassnj.com",
+      "e-zpassiag.com"
+    ],
+    "venmo": [
+      "venmo.com"
+    ],
+    "zelle": [
+      "zellepay.com"
+    ],
+    "coinbase": [
+      "coinbase.com"
+    ],
+    "microsoft": [
+      "microsoft.com",
+      "live.com"
+    ],
+    "royalmail": [
+      "royalmail.com"
+    ],
+    "hmrc": [
+      "gov.uk"
+    ],
+    "walmart": [
+      "walmart.com"
+    ],
+    "costco": [
+      "costco.com"
+    ]
+  },
+  "flags": {
+    "urgency": "\\b(urgent|immediately|asap|act now|final (notice|warning|attempt)|last chance|within (24|48) ?(hours|hrs)|expires?|expired|today only|right away|2nd attempt)\\b",
+    "prize": "\\b(won|winner|wins?|prize|claim|congratulations|congrats|you have been selected|reward|free gift|guaranteed|bonus|jackpot|lottery)\\b",
+    "payment_ask": "\\b(gift ?cards?|itunes card|google play card|steam card|bitcoin|btc|crypto|wire transfer|western union|moneygram)\\b",
+    "credential_ask": "\\b(verify|confirm your|password|passcode|pin number|ssn|social security|log ?in|sign ?in|update your (payment|billing|details|information|account)|security code|verification code|one[- ]time (code|password)|bank details|card details)\\b",
+    "delivery_issue": "\\b(package|parcel|delivery|shipment|redelivery|courier)\\b.{0,60}\\b(failed|unable|held|hold|pending|missed|incomplete|address|fee|reschedule)\\b|\\b(failed|unable|missed)\\b.{0,40}\\b(delivery|deliver|package|parcel)\\b",
+    "account_problem": "\\b(account|card|card number)\\b.{0,40}\\b(suspended|locked|blocked|compromised|unusual activity|disabled|frozen|deactivated|restricted|on hold)\\b|\\bunauthori[sz]ed (charge|transaction|login|access)\\b",
+    "unpaid_bill": "\\b(unpaid|outstanding|overdue|past due)\\b.{0,30}\\b(toll|balance|fee|bill|invoice|fine|ticket|tax)\\b|\\b(toll|ticket|fine)\\b.{0,30}\\b(unpaid|outstanding|due)\\b",
+    "reply_to_claim": "\\b(txt|text|reply|send)\\b.{0,25}\\b(to|on)\\b ?\\d{5}\\b|\\bcall 09\\d{3,}"
+  },
+  "explanations": {
+    "url_present": "Has a link. Scams almost always try to get you to tap one.",
+    "url_shortener": "Uses a link shortener, which hides where the link really goes.",
+    "suspicious_tld": "The link ends in a web address type (like .top or .xyz) that's cheap and common in scams.",
+    "brand_lookalike": "The link uses a company's name but isn't that company's real website.",
+    "ip_url": "The link is a raw number address instead of a real website name.",
+    "urgency": "Pressures you to act fast. Real companies rarely give you minutes or hours.",
+    "prize": "Promises a prize or reward you didn't sign up for.",
+    "payment_ask": "Mentions paying with gift cards, crypto, or money apps, which scammers prefer because it can't be reversed.",
+    "credential_ask": "Asks you to verify or enter account details, codes, or passwords.",
+    "delivery_issue": "Claims there's a problem with a package. One of the most common scam texts.",
+    "account_problem": "Says your account is locked, suspended, or had unusual activity.",
+    "unpaid_bill": "Claims you owe a toll, fine, or bill.",
+    "reply_to_claim": "Asks you to text a short code or call a premium number, which can charge you.",
+    "shouting": "Lots of ALL CAPS, a common trick to grab attention.",
+    "has_money": "Mentions a specific amount of money.",
+    "has_phone": "Includes a phone number to call."
+  },
+  "severe": [
+    "brand_lookalike",
+    "ip_url",
+    "payment_ask",
+    "url_shortener",
+    "suspicious_tld"
+  ],
+  "brandFillers": [
+    "delivery",
+    "redelivery",
+    "support",
+    "secure",
+    "security",
+    "verify",
+    "verification",
+    "help",
+    "service",
+    "services",
+    "account",
+    "accounts",
+    "login",
+    "signin",
+    "pay",
+    "payment",
+    "billing",
+    "track",
+    "tracking",
+    "parcel",
+    "post",
+    "alert",
+    "alerts",
+    "notice",
+    "update",
+    "center",
+    "online",
+    "id",
+    "care",
+    "info",
+    "customer",
+    "refund",
+    "rewards",
+    "package",
+    "express",
+    "mail",
+    "toll",
+    "tolls"
+  ]
+}

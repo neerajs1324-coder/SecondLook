@@ -1,0 +1,6 @@
+ftfy
+datasketch
+numpy
+scipy
+scikit-learn
+pytest

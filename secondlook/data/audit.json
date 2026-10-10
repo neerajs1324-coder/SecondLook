@@ -1,0 +1,33 @@
+{
+  "mendeley_rows": 5969,
+  "mendeley_duplicates": 146,
+  "uci_rows": 5572,
+  "uci_already_in_mendeley": 5300,
+  "uci_duplicates": 89,
+  "unique_messages": 6006,
+  "share_in_multi_message_campaigns": {
+    "legit": 0.069,
+    "scam": 0.617,
+    "spam": 0.314
+  },
+  "splits": {
+    "train": {
+      "legit": 3543,
+      "scam": 402,
+      "spam": 309
+    },
+    "test": {
+      "legit": 709,
+      "scam": 80,
+      "spam": 62
+    },
+    "validation": {
+      "legit": 709,
+      "scam": 80,
+      "spam": 62
+    },
+    "extra_check": {
+      "spam_unknown": 50
+    }
+  }
+}
