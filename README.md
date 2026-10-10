@@ -2,7 +2,7 @@
 
 A scam text checker. Paste a suspicious text message and it tells you how likely it is to be a scam, **why**, and what to do about it. The model runs entirely in the browser, so messages never leave your device.
 
-**Live site:** [add your link here]
+**Live site:** https://secondlook-web-phi.vercel.app
 
 Americans lost about $21 billion to online crime in 2025, and a lot of it starts with a single fake text: "your package is on hold," "your account is locked," "you owe a toll." Second Look is built for the people who get hit hardest, like older relatives, so the results are written in plain English with large, readable type.
 
